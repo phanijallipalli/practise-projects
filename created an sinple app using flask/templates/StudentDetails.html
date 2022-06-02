@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Data</title>
+</head>
+<body>
+<h1>Student Details</h1>
+<table border="2" id = 'student-details-table'>
+    <thead>
+    <tr>
+        <td>Student id</td>
+        <td>Course id</td>
+        <td>Marks</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in range(0,count)%}
+        <tr>
+            <td>{{output_in_dict['Student id'][i] }}</td>
+            <td>{{output_in_dict[' Course id'][i] }}</td>
+            <td>{{output_in_dict[' Marks'][i] }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="2" align="center">
+                Total Marks
+            </td>
+            <td> {{sum}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<a href= '\' >Go Back</a>
+</body>
+</html>
